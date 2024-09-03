@@ -208,6 +208,8 @@ ul {
 }
 
 .menu__btn {
+    position: absolute;
+    right: .1vw;
     display: none;
     align-items: center;
     order: 1;
@@ -252,8 +254,7 @@ ul {
 .trends-wrp {
     position: relative;
     margin-top: 37px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
     gap: 5px;
     min-height: 320px;
     max-width: 100%;
@@ -261,7 +262,7 @@ ul {
 
 .trend-card {
     position: relative;
-    display: grid;
+    display: flex;
     justify-items: center;
     align-items: self-end;
     height: auto;
@@ -276,20 +277,27 @@ ul {
     right: 0;
     content: "";
     background-color: rgba(0, 0, 0, 0.6);
+    background-size: cover;
+    background-position: center;
 }
 
-.trend-img {
-    grid-column: 1/-1;
-    grid-row: 1/-1;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -10;
+.trend1 {
+    background-image: url("../images/trend1.jpg");
+}
+
+.trend2 {
+    background-image: url("../images/trend2.jpg");
+}
+
+.trend3 {
+    background-image: url("../images/trend3.jpg");
+}
+
+.trend4 {
+    background-image: url("../images/trend4.jpg");
 }
 
 .trend-card-wrp {
-    grid-column: 1/-1;
-    grid-row: 1/-1;
     z-index: 1;
     max-width: 370px;
     height: auto;
@@ -547,15 +555,12 @@ ul {
     align-items: center;
 }
 
-.shop-title {}
-
 .shop-wrp {
     width: 100%;
     margin-top: 38px;
-    display: grid;
+    display: flex;
     justify-items: center;
-    gap: 62px;
-    grid-template-columns: repeat(3, 1fr);
+    gap: 64px;
 }
 
 .shop-card {
@@ -576,22 +581,19 @@ ul {
 
 .shop-card-wrp {
     flex-grow: 1;
-    display: grid;
-    grid-template-rows: min-content min-content min-content;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: column;
     min-height: 267px;
     margin-top: -37px;
     border: rgba(181, 159, 91, 0.6) 3px solid;
-    padding: 50px 18px 20px 18px;
+    padding: 50px 20px 20px 20px;
 }
 
 .shop-card-title {
-    grid-column: 1/-1;
 }
 
 .shop-card-desc {
     margin-top: 5px;
-    grid-column: 1/-1;
     font-size: 15px;
     line-height: 1.466;
 }
@@ -600,25 +602,40 @@ ul {
     color: #b59f5b;
 }
 
-del {
+.discount-price {
     font-size: 14px;
 }
 
+.shop-card-price-block {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .shop-card-price {
-    margin-left: 2px;
-    margin-bottom: 8px;
-    align-self: end;
+    display: flex;
+    flex-direction: column;
     font-weight: bold;
     font-size: 20px;
     line-height: 1;
 }
 
 .shop-card-to-shop {
-    justify-self: end;
-    width: 140px;
-    margin-top: 20px;
-    margin-right: 3px;
+    width: 142px;
     height: 50px;
+    padding: 18px 28px;
+    font-weight: bold;
+    line-height: 1;
+    text-transform: uppercase;
+    border: none;
+    background-color: #b59f5b;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.shop-card-to-shop:hover {
+    background-color: #323232;
 }
 
 /* FOOTER */
@@ -691,7 +708,6 @@ footer {
 }
 
 .popup-wrp {
-    margin-top: 23vh;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -699,8 +715,6 @@ footer {
 }
 
 .popup-window {
-    width: 390px;
-    height: 590px;
     padding: 50px 30px;
     background-color: white;
 
@@ -891,31 +905,25 @@ footer {
     }
 
     .trend-title {
-        margin-top: 0;
         font-size: 17px;
         line-height: 1.29;
     }
 
     .trends-wrp {
-        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        flex-wrap: wrap;
         margin-top: 30px;
         gap: 3px;
     }
 
-    .trend-card {}
-
-    .trend-img {
-        max-height: 247px;
+    .trend-card {
+        max-width: calc(50% - (3px/2));
+        min-height: 247px;
     }
 
     .trend-card-wrp {
-        padding: 34px 32px 28px 28px;
+        padding: 33px 32px 30px 32px;
 
-    }
-
-    .trend-card-wrp .tag-link {
-        top: -7px;
-        left: 2px;
     }
 
     .main {
@@ -972,10 +980,18 @@ footer {
         margin-top: 37px;
     }
 
+    .tags-cloud-list {
+        justify-content: center;
+    }
+
     .shop-wrp {
+        flex-wrap: wrap;
         margin-top: 32px;
         gap: 22px;
-        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .shop-card {
+        width: calc(50% - 22px / 2);
     }
 
     .shop-card-wrp {
@@ -990,7 +1006,6 @@ footer {
         padding-top: 55px;
         margin-top: -42px;
         min-height: 245px;
-        height: 245px;
     }
 
     .shop-card:nth-child(n+3) .shop-card-desc {
@@ -1008,7 +1023,6 @@ footer {
     }
 
     .popup-wrp {
-        margin-top: 20vh;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
@@ -1137,33 +1151,25 @@ footer {
         margin-top: 41px;
     }
 
+    .trend-card {
+        min-height: 230px;
+    }
+
     .trends-wrp {
+        flex-direction: column  ;
         margin-top: 34px;
         gap: 4px;
     }
 
     .trend-card-wrp {
+        align-items: center;
         margin: 16px 15px;
-        padding: 28px 15px 32px 15px;
-    }
-
-    .trend-img {
-        height: 230px;
-        object-fit: cover;
+        padding: 32px 18px 27px 19px;
     }
 
     .trend-title {
-        position: relative;
-        margin-top: 0;
-        top: 6px;
-        left: 5px;
+        max-width: 90%;
         line-height: 1.25;
-    }
-
-    .trend-card-wrp .tags-list {
-        position: relative;
-        top: 4px;
-        margin-left: 5px;
     }
 
     .article {
@@ -1190,8 +1196,6 @@ footer {
     .article-title {
         margin-top: 3px;
     }
-
-    .article-img {}
 
     .article-pubinfo {
         margin-top: 14px;
@@ -1243,7 +1247,7 @@ footer {
     }
 
     .shop-wrp {
-        grid-template-columns: 1fr;
+        flex-direction: column;
         gap: 28px;
     }
 
@@ -1260,18 +1264,12 @@ footer {
         margin-bottom: 50px;
     }
 
-    .popup {
-        align-items: flex-start;
-    }
-
     .popup-wrp {
         width: auto;
-        margin: 3vh 4.17vw 0 4.17vw;
+        margin: 0 4.17vw 0 4.17vw;
     }
 
     .popup-window {
-        width: 100%;
-        height: auto;
         padding: 28px 26px 27px 23px;
     }
 

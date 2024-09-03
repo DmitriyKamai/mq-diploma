@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Блог о творчестве, спорте, и образе жизни</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?ver=2">
 </head>
 
 <body>
@@ -69,8 +69,7 @@
             сейчас в тренде
         </h2>
         <div class="trends-wrp">
-            <div class="trend-card">
-                <img src="images/trend1.jpg" alt="Рассада" class="trend-img">
+            <div class="trend-card trend1">
                 <div class="trend-card-wrp">
                     <ul class="tags-list">
                         <li class="tags-list-item">
@@ -81,13 +80,14 @@
                         </li>
                     </ul>
                     <h2 class="trend-title">
-                        Сейчас в тренде: сад
+                        <a href="#0" class="trend-title-link">
+                            Сейчас в тренде: сад
                         на подоконнике
+                        </a>
                     </h2>
                 </div>
             </div>
-            <div class="trend-card">
-                <img src="images/trend2.jpg" alt="Сыры" class="trend-img">
+            <div class="trend-card trend2">
                 <div class="trend-card-wrp">
                     <ul class="tags-list">
                         <li class="tags-list-item">
@@ -95,14 +95,15 @@
                         </li>
                     </ul>
                     <h2 class="trend-title">
-                        сыры на красивых
+                        <a href="#0" class="trend-title-link">
+                            сыры на красивых
                         картинках из интернета:
                         какие они на вкус?
+                        </a>
                     </h2>
                 </div>
             </div>
-            <div class="trend-card">
-                <img src="images/trend3.jpg" alt="Горы" class="trend-img">
+            <div class="trend-card trend3">
                 <div class="trend-card-wrp">
                     <ul class="tags-list">
                         <li class="tags-list-item">
@@ -113,13 +114,14 @@
                         </li>
                     </ul>
                     <h2 class="trend-title">
-                        СОБИРАЕМСЯ В ПЕРВЫЙ
+                        <a href="#0" class="trend-title-link">
+                            СОБИРАЕМСЯ В ПЕРВЫЙ
                         ПОХОД В ГОРЫ
+                        </a>
                     </h2>
                 </div>
             </div>
-            <div class="trend-card">
-                <img src="images/trend4.jpg" alt="Лимоны" class="trend-img">
+            <div class="trend-card trend4">
                 <div class="trend-card-wrp">
                     <ul class="tags-list">
                         <li class="tags-list-item">
@@ -130,8 +132,10 @@
                         </li>
                     </ul>
                     <h2 class="trend-title">
-                        Сейчас в тренде: сКОЛЬКО
+                        <a href="#0" class="trend-title-link">
+                            Сейчас в тренде: сКОЛЬКО
                         ВИТАМИНА c В ЛИМОНАХ?
+                        </a>
                     </h2>
                 </div>
             </div>
@@ -430,10 +434,13 @@
                     <p class="shop-card-desc">Набор из двух подушек с модными принтами. Видео о создании
                         <a href="" class="shop-card-link">здесь.</a>
                     </p>
-                    <div class="shop-card-price">
-                        <del>1000 &#x20bd;</del><br>800 &#x20bd;
+                    <div class="shop-card-price-block">
+                        <div class="shop-card-price">
+                            <span class="discount-price"><del>1000 &#x20bd;</del></span>
+                            <span class="actually-price">800 &#x20bd;</span>
+                        </div>
+                        <a class="shop-card-to-shop">в магазин</a>
                     </div>
-                    <button class="shop-card-to-shop">в магазин</button>
                 </div>
             </div>
             <div class="shop-card">
@@ -450,10 +457,12 @@
                         <a href="" class="shop-card-link">весенняя серия постов</a>
                         в блоге и несколько подкастов.
                     </p>
-                    <div class="shop-card-price">
-                        3500 &#x20bd;
+                    <div class="shop-card-price-block">
+                        <div class="shop-card-price">
+                            <span class="actually-price">3500 &#x20bd;</span>
+                        </div>
+                        <a class="shop-card-to-shop">в магазин</a>
                     </div>
-                    <button class="shop-card-to-shop">в магазин</button>
                 </div>
             </div>
             <div class="shop-card">
@@ -468,10 +477,13 @@
                     <p class="shop-card-desc">Необычная рамка для украшения дома из видео
                         <a href="" class="shop-card-link">«Как сделать рамку из подручных средств за 30 минут»</a>
                     </p>
-                    <div class="shop-card-price">
-                        <del>500 &#x20bd;</del><br>400 &#x20bd;
+                    <div class="shop-card-price-block">
+                        <div class="shop-card-price">
+                            <span class="discount-price"><del>500 &#x20bd;</del></span>
+                            <span class="actually-price">400 &#x20bd;</span>
+                        </div>
+                        <a class="shop-card-to-shop">в магазин</a>
                     </div>
-                    <button class="shop-card-to-shop">в магазин</button>
                 </div>
             </div>
         </div>
