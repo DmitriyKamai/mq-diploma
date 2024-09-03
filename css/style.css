@@ -253,9 +253,9 @@ ul {
 }
 
 .trends-wrp {
+    display: flex;
     position: relative;
     margin-top: 37px;
-    display: flex;
     gap: 5px;
     min-height: 320px;
     max-width: 100%;
@@ -418,7 +418,7 @@ ul {
 }
 
 .new-post-info {
-    margin-left: 19px;
+    margin-left: 2.5vw;
     margin-top: -7px;
 }
 
@@ -900,7 +900,7 @@ footer {
         justify-content: space-between;
         width: 100%;
         padding: 50px 4.56vw 0 4.56vw;
-        gap: 5px;
+        gap: 1vw;
     }
 
     .trends {
@@ -920,12 +920,12 @@ footer {
     }
 
     .trend-card {
-        max-width: calc(50% - (3px/2));
+        width: calc(50% - (3px/2));
         min-height: 247px;
     }
 
     .trend-card-wrp {
-        padding: 33px 32px 30px 32px;
+        padding: 33px 4.17vw 30px 4.17vw;
 
     }
 
@@ -1168,7 +1168,7 @@ footer {
     .trend-card-wrp {
         align-items: center;
         margin: 16px 15px;
-        padding: 32px 18px 27px 19px;
+        padding: 32px 5vw 27px 5.3vw;
     }
 
     .trend-title {
