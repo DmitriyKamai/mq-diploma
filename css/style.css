@@ -930,6 +930,9 @@ footer {
     }
 
     .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         flex-grow: 5;
         flex-shrink: 1;
     }
@@ -939,6 +942,10 @@ footer {
     }
 
     .article {
+        position: relative;
+        right: 14px;
+        justify-self: center;
+        width: fit-content;
         padding-bottom: 15px;
         flex-direction: column;
     }
@@ -1155,10 +1162,6 @@ footer {
         padding: 44px 4.17vw 0 4.17vw;
     }
 
-    .min-content-mobile {
-        width: min-content;
-    }
-
     .trends {
         margin-top: 41px;
     }
@@ -1185,7 +1188,15 @@ footer {
         line-height: 1.25;
     }
 
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .article {
+        width: 91vw;
+        max-width: min-content;
         padding-bottom: 21px;
         flex-direction: column;
     }
@@ -1203,7 +1214,7 @@ footer {
 
     .article-info {
         margin-left: 0;
-        margin-top: 13px;
+        margin-top: 15px;
     }
 
     .article-title {
