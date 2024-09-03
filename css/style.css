@@ -261,6 +261,7 @@ ul {
 }
 
 .trend-card {
+    width: calc(25% - (15px / 4));
     position: relative;
     display: flex;
     justify-items: center;
@@ -1152,6 +1153,7 @@ footer {
     }
 
     .trend-card {
+        width: 100%;
         min-height: 230px;
     }
 
